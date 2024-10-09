@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistanceConverter.Views.WeightPage">
+    <ContentPage.Content>
+        <ScrollView>  <!--View Control for distance page front end-->
+         <Grid Padding="20,60,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>  <!--Colum 0-->
+                <ColumnDefinition Width="20"/> <!--Colum 1-->
+                <ColumnDefinition Width="*"/>  <!--Colum 2-->
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                
+                <RowDefinition Height="auto"/>  <!--Row 0-->
+                <RowDefinition Height="30"/>  <!--Row 1-->
+                <RowDefinition Height="auto"/> <!--Row 2-->
+                <RowDefinition Height="30"/> <!--Row 3-->
+                <RowDefinition Height="auto"/> <!--Row 4-->
+                <RowDefinition Height="30"/> <!--Row 5-->
+                <RowDefinition Height="auto"/> <!--Row 6-->
+                <RowDefinition Height="30"/> <!--7-->
+                <RowDefinition Height="30"/><!--8-->
+                <RowDefinition Height="30"/> <!-- 9-->
+                <RowDefinition Height="30"/> <!--10-->
+                <RowDefinition Height="30"/> <!--11-->
+                
+                
+                
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0"  Grid.Column="0" VerticalTextAlignment="Center" Text="Ounces"/>
+            <Entry  Grid.Row="0" Grid.Column="2" x:Name="txtOunce" TextChanged="TxtOunce_OnTextChanged"  Keyboard="Numeric" /> <!--TextChanged Functions will hold our conversion Calculations-->
+            
+            <Label Grid.Row="2" Grid.Column="0"  VerticalTextAlignment="Center" Text="Pounds"/>
+            <Entry Grid.Row="2" Grid.Column="2" x:Name="txtPound" TextChanged="TxtPound_OnTextChanged" Keyboard="Numeric" />
+
+            <Label Grid.Row="4" Grid.Column="0"  VerticalTextAlignment="Center" Text="MilliGrams"/>
+            <Entry Grid.Row="4" Grid.Column="2" x:Name="txtGram" TextChanged="TxtGram_OnTextChanged" Keyboard="Numeric" />
+            
+            <Label Grid.Row="6" Grid.Column="0"  VerticalTextAlignment="Center" Text="KiloGrams" />
+            <Entry Grid.Row="6" Grid.Column="2" x:Name="txtMilligram" TextChanged="TxtMilligram_OnTextChanged" Keyboard="Numeric" />
+            
+            <Label Grid.Row="8" Grid.Column="0"  VerticalTextAlignment="Center" Text="Short Ton"/>
+            <Entry Grid.Row="8" Grid.Column="2" x:Name="txtShortTon" TextChanged="TxtShortTon_OnTextChanged" Keyboard="Numeric" /> <!--next Steps Add Each Conversion Text Cahnged tab, Add Clear and conversion Button and add Navigation Tab with image -->
+            
+          <StackLayout Orientation="Horizontal" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3">
+              <Button Text="Clear" HorizontalOptions="FillAndExpand" Clicked="Clear_OnClicked"  Margin="5,5"/> <!--Insert Clear Button Clicked function-->
+              <Button Text="Convert" HorizontalOptions="FillAndExpand" Clicked="Convert_OnClicked" Margin="5,5"/> <!--Insert  Covert Button Clicked function-->
+          </StackLayout>
+             
+         </Grid>
+        </ScrollView>       
+    </ContentPage.Content>
+</ContentPage>

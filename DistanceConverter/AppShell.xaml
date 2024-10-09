@@ -5,10 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DistanceConverter.Views"
     Shell.FlyoutBehavior="Disabled">
-
+    <!--
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:DistancePage}"
         Route="DistancePage" />
+    -->
+    <TabBar x:Name="NavBar">
+        <Tab Title="Distance Converter" Icon="distance_tab">
+            <ShellContent Title="Distance Converter" ContentTemplate="{DataTemplate local:DistancePage}" Route="DistancePage"/>
+        </Tab>
+        <Tab Title="Weight Converter" Icon="weight_tab">
+            <ShellContent Title="Weight Converter" ContentTemplate="{DataTemplate local:WeightPage}" Route="WeightPage"/>
+        </Tab>
+    </TabBar>
+    
+   
 
 </Shell>
+
